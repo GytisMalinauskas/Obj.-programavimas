@@ -124,11 +124,13 @@ if(number3==1)
   c[m].grade=c[m].average*0.4+0.6*c[m].Eresults;
         m++;
     }
+  }
     if(skaicius==3)
     {
       ifstream fd("kursiokai.txt");
       string nameF, surnameF;
       char ch;
+      m=0;
       while (fd.get(ch))
       {
         if(ch != ' ' && ch != '\n' && ch != '\t')
@@ -154,16 +156,54 @@ if(number3==1)
               n++;
             }
             string egz;
-            else if (nORe=="Egz.")
+            if(nORe=="Egz.")
             {
               egz=nORe;
+              break;
             }
-
           }
+          break;
         }
       }
-
-    }
+  char ch2;
+  while(!fd.eof())
+  {
+      while (fd.get(ch2))
+      {
+        if(ch2 != ' ' && ch2 != '\n' && ch2 != '\t')
+        {
+          c[m].name+=ch2;
+        }
+        else if(c[m].name.length()!=0 && (ch2 == ' ' || ch2 == '\n' || ch2 == '\t'))
+        {
+          if(ch2 != ' ' && ch2 != '\n' && ch2 != '\t')
+          {
+            c[m].surname+=ch2;
+          }
+        }
+        else if(c[m].surname.length()!=0 && (ch2 == ' ' || ch2 == '\n' || ch2 == '\t'))
+        {
+          double results;
+          for(int i=0; i<n; i++)
+          {
+            fd>>results;
+            c[m].nd.push_back(results);
+            c[i].sum+=results;
+          }
+          fd>>c[m].Eresults;
+          sort(c[m].nd.begin(),c[m].nd.end());
+  c[m].median=0;
+  if (n%2!=0)
+  {c[m].median=c[m].nd[n/2];}
+  if (n%2==0)
+  {c[m].median=(c[m].nd[n/2]+c[m].nd[n/2+1])/2.0;}
+  c[m].average=c[m].sum/n;
+  c[m].Eresults=MinP+rand()%(MaxP-MinP+1);
+  c[m].grade=c[m].average*0.4+0.6*c[m].Eresults;
+          m++;
+        }
+      }
+  }
 
   }
   string choice;
