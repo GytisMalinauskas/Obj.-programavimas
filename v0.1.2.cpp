@@ -43,14 +43,11 @@ void initializeNamesAndSurnames() {
     surnames.push_back("Moore");
     surnames.push_back("Taylor");
 }
-// Function to generate a random full name
 string generateRandomName(vector <string> names) {
-     // Seed the random number generator
     string name2 = names[rand() % names.size()];
     return name2;
 }
 string generateRandomSurname(vector <string> surnames) {
-    // Seed the random number generator
     string surname2 = surnames[rand() % surnames.size()];
     return surname2;
 }
@@ -60,150 +57,175 @@ int main()
   initializeNamesAndSurnames();
   srand(time(0));
   int MinP=1, MaxP=100;
-  int MinP2=1, MaxP2=20; 
   int m,n;
+  vector <studentas> c;
   cout<<"Enter number"<<endl; 
-  cout<<"1 - n and m are given"<<endl;
-  cout<<"2 - n and m are not given"<<endl;
+  cout<<"1 - manual input"<<endl;
+  cout<<"2 - generate grades"<<endl;
+  cout<<"3 - generate names and grades"<<endl;
+  cout<<"4 - quit"<<endl;
   int skaicius;
-  vector <studentas> c; 
   cin>>skaicius;
-  if(skaicius==1)
+  cout<<"Enter number"<<endl;
+  cout<<"1 - n and m is given"<<endl;
+  cout<<"2 - n and m is not given"<<endl;
+  int number1; 
+  cin>>number1;
+  if(skaicius!=4)
+  {
+    if(number1==1)
     {
-    cout<<"Enter the number of students: "; cin>>m;
-    cout<<"Enter the number of homework: "; cin>>n;
-    int number3;
-    c.resize(m);
-    for(int i=0; i<m; i++)
-    c[i].nd.resize(n);
-    cout<<"Enter number 1 (for manual input) or 2 (for auto generating) homework results: "; cin>>number3; 
-    for(int i=0; i<m; i++)
+      cout<<"Enter the number of students: "; cin>>m;
+      cout<<"Enter the number of homework: "; cin>>n;
+      c.resize(m);
+      for(int i=0; i<m; i++)
       {
-      if(number3==2)
+        c[i].nd.resize(n);
+        if(skaicius==1||skaicius==2)
         {
-        c[i].name=generateRandomName(names);
-        c[i].surname=generateRandomSurname(surnames);
-        for(int j=0; j<n; j++)
-          {
-          double result = MinP+rand()%(MaxP-MinP+1);
-          c[i].nd.push_back(result);
-          c[i].sum+=result;
-          c[i].Eresults=MinP+rand()%(MaxP-MinP+1);
-          }
+          cout<<"Enter name: "; cin>>c[i].name; 
+          cout<<"Enter Surname: "; cin>>c[i].surname;
         }
-      if(number3==1)
+        else if(skaicius==3)
         {
-        cout<<"Enter name: "; cin>>c[i].name; 
-        cout<<"Enter Surname: "; cin>>c[i].surname;
-        for(int j=0; j<n; j++)
-          {
-          double result;
-          cout<<"Enter the result of homework "<<j+1<<": "<<endl;
-          cin>>result;
-          c[i].nd.push_back(result);
-          c[i].sum+=result;
-          }
-        cout<<"Enter the results of an exam: "; cin>>c[i].Eresults;
+          c[i].name=generateRandomName(names);
+          c[i].surname=generateRandomSurname(surnames);
         }
+          for(int j=0; j<n; j++)
+          {
+            double result=0;
+            if(skaicius==1)
+            {
+              cout<<"Enter homework result "<<j+1<<" : "<<endl;
+              cin>>result;
+            }
+            if(skaicius==2||skaicius==3)
+            {
+              result=MinP+rand()%(MaxP-MinP+1);
+            }
+            c[i].nd.push_back(result);
+            c[i].sum+=result;
+          }
+            if(skaicius==1)
+            {
+              cout<<"Enter exam results: "<<endl;
+              cin>>c[i].Eresults;
+            }
+            if(skaicius==2||skaicius==3)
+            {
+              c[i].Eresults=MinP+rand()%(MaxP-MinP+1);
+            }
       sort(c[i].nd.begin(),c[i].nd.end());
       c[i].median=0;
-      if (n%2!=0)
-        {c[i].median=c[i].nd[n/2];}
-      if (n%2==0)
-        {c[i].median=(c[i].nd[n/2]+c[i].nd[n/2+1])/2.0;}
+      if(n%2!=0)
+      {c[i].median=c[i].nd[n/2];}
+      if(n%2==0)
+      {c[i].median=(c[i].nd[n/2]+c[i].nd[n/2+1])/2.0;}
       c[i].average=c[i].sum/n;
-      c[i].Eresults=MinP+rand()%(MaxP-MinP+1);
       c[i].grade=c[i].average*0.4+0.6*c[i].Eresults;
       }
     }
-  if(skaicius==2)
+    else if(number1 == 2)
     {
-    m=0; c.resize(m+1);
-    int number2;
-    cout<<"Enter number 1 (for manual input) or 2 (for auto generating) homework results: "; cin>>number2;
-    while(true)
+      m=0; 
+      c.resize(m+1);
+      while(true)
       {
-      if(number2==1)
+        if(skaicius==1||skaicius==2)
         {
+          string vardas;
           cout<<"Enter name or type 'quit' to quit: "; 
-          cin>>c[m].name;
-          if (c[m].name=="quit")break;
+          cin>>vardas;
+          if (vardas=="quit")
+          {break;}
+          c[m].name=vardas;
           cout<<"Enter surname: ";
           cin>>c[m].surname;
-        while(true)
+        } 
+        if(skaicius==3)
+        {
+          string gq;
+          cout<<"Enter g (to generate 1 student) or q (to quit): "; 
+          cin>>gq;
+          if(gq=="q")
+          {break;}
+          else if(gq=="g")
+          {
+            c[m].name=generateRandomName(names);
+            c[m].surname=generateRandomSurname(surnames);
+          }
+        }
+        c[m].ndCount=0;
+        c[m].nd.resize(c[m].ndCount);
+        double result;  
+        if(skaicius==1)
+        {
+          while(true)
           { 
-          c[m].ndCount=0;
-          c[m].nd.resize(c[m].ndCount);
-          double result;
-          cout<<"Enter homework results or type '1000' to quit: "; cin>>result; 
-          if(result == 1000) {break;}
+          cout<<"Enter homework results or type '1000' to quit: "; 
+          cin>>result; 
+          if(result == 1000) 
+          {break;}
           c[m].ndCount++;
           c[m].nd.resize(c[m].ndCount);
           c[m].nd.push_back(result);
           c[m].sum+=result;
           }
-        cout<<"Enter results of exam: "; cin>>c[m].Eresults;
-        sort(c[m].nd.begin(),c[m].nd.end());
-      c[m].median=0;
-      if (c[m].ndCount%2!=0)
-        {c[m].median=c[m].nd[c[m].ndCount/2];}
-      if (c[m].ndCount%2==0)
-        {c[m].median=(c[m].nd[c[m].ndCount/2]+c[m].nd[c[m].ndCount/2+1])/2.0;}
-      c[m].average=c[m].sum/c[m].ndCount;
-      c[m].Eresults=MinP+rand()%(MaxP-MinP+1);
-      c[m].grade=c[m].average*0.4+0.6*c[m].Eresults;
-      m++;
-      c.resize(m+1);
         }
-      if(number2==2)
+        if(skaicius==2||skaicius==3)
         {
-        bool continueLoop = true;
-        while(continueLoop)
+          while(true)
           {
-          string gq;
-          cout<<"Enter g (to generate 1 student) or q (to quit): "; cin>>gq;
-          if(gq=="q"){continueLoop=false;}
-          else if(gq=="g")
+            string gq2;
+            cout<<"Enter g (to generate "<<c[m].ndCount+1<<" homework result) or q (to quit): "; 
+            cin>>gq2;
+            if(gq2=="q")
+            {break;}
+            else if(gq2=="g")
             {
-            c[m].name=generateRandomName(names); cout<<c[m].name<<" ";
-            c[m].surname=generateRandomSurname(surnames); cout<<c[m].surname<<endl;
-            c[m].ndCount=MinP2+rand()%(MaxP2-MinP2+1);
-            c[m].nd.resize(c[m].ndCount);
-            for(int j=0; j<c[m].ndCount; j++)
-              {
-        double result = MinP+rand()%(MaxP-MinP+1);
+              result=MinP+rand()%(MaxP-MinP+1);
+              c[m].ndCount++;
+              c[m].nd.resize(c[m].ndCount);
               c[m].nd.push_back(result);
               c[m].sum+=result;
-              sort(c[m].nd.begin(),c[m].nd.end());
-      c[m].median=0;
-      if (c[m].ndCount%2!=0)
-        {c[m].median=c[m].nd[c[m].ndCount/2];}
-      if (c[m].ndCount%2==0)
-        {c[m].median=(c[m].nd[c[m].ndCount/2]+c[m].nd[c[m].ndCount/2+1])/2.0;}
-      c[m].average=c[m].sum/c[m].ndCount;
-      c[m].Eresults=MinP+rand()%(MaxP-MinP+1);
-      c[m].grade=c[m].average*0.4+0.6*c[m].Eresults;
-      m++;
-      c.resize(m+1);
-              }
             }
-          }
-          break;
+          } 
         }
-      }
+        if(skaicius==1)
+        {
+          cout<<"Enter exam result: ";
+          cin>>c[m].Eresults;
+        }
+        if(skaicius==2||skaicius==3)
+        {
+          c[m].Eresults=MinP+rand()%(MaxP-MinP+1);
+        }
+        sort(c[m].nd.begin(),c[m].nd.end());
+        c[m].median=0;
+        if (c[m].ndCount%2!=0)
+        {c[m].median=c[m].nd[c[m].ndCount/2];}
+        if (c[m].ndCount%2==0)
+        {c[m].median=(c[m].nd[c[m].ndCount/2]+c[m].nd[c[m].ndCount/2+1])/2.0;}
+        c[m].average=c[m].sum/c[m].ndCount;
+        c[m].Eresults=MinP+rand()%(MaxP-MinP+1);
+        c[m].grade=c[m].average*0.4+0.6*c[m].Eresults;
+        m++;
+        c.resize(m+1);
+      }   
+    }
+    string choice;
+    cout<<"Choose either average or median: "; cin>>choice;
+    if (choice=="median")
+    {
+      cout<<"Name     Surname      Grade(Med.)"<<endl;
+      for(int i=0; i<m; i++)
+      {cout<<fixed<<setw(8)<<left<<c[i].name<<" "<<setw(12)<<left<<c[i].surname<<" "<<setprecision(2)<<setw(13)<<c[i].median<<endl;}
+    }
+    else if (choice=="average")
+    {
+      cout<<"Name     Surname      Grade(Vid.)"<<endl;
+      for(int i=0; i<m; i++)
+      {cout<<fixed<<setw(8)<<left<<c[i].name<<" "<<setw(12)<<left<<c[i].surname<<" "<<setprecision(2)<<setw(13)<<c[i].grade<<endl;}
+    }
   }
-  string choice;
-  cout<<"Choose either average or median: "; cin>>choice;
-  if (choice=="median")
-{
-  cout<<"Name     Surname      Grade(Med.)"<<endl;
-  for(int i=0; i<m; i++)
-  cout<<fixed<<setw(8)<<left<<c[i].name<<" "<<setw(12)<<left<<c[i].surname<<" "<<setprecision(2)<<setw(13)<<c[i].median<<endl;
-}
-  else if (choice=="average")
-{
-  cout<<"Name     Surname      Grade(Vid.)"<<endl;
-  for(int i=0; i<m; i++)
-  cout<<fixed<<setw(8)<<left<<c[i].name<<" "<<setw(12)<<left<<c[i].surname<<" "<<setprecision(2)<<setw(13)<<c[i].grade<<endl;
-}
 }
