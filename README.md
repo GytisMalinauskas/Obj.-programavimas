@@ -1,13 +1,13 @@
 ##programa v0.1.1
 
 Si programa naudoja c masyvus\
-Programoje galima pasirenkant skaiciu 1 arba 2 pasirinkti jos eiga: Zinomas sudentu ir namu darbu skaicius arba jie nezinomi\
-Tuomet galima rankiniu budu suvesti namu darbu resultatus bei egzamino rezultata ir vardus bei pavardes arba juos generuoti automatiskai\
-Galiausiai galima pasirinkti ar norime, kad rexultatuose matytume vidurki arba mediana\
+Programoje galima ivedant skaiciu (1, 2, 3, 4) pasirinkti jos eiga: Ar norima vesti studentus ir ju pazymius ranka; Irasyti studentus ranka\ taciau sugeneruoti ju pazymius; Sugeneruoti tiek pacius studentus ir ju pazymius; Baigti programa.\
+Tuomet renkamasi ar zinomas studentu skaicius m ir ju pazymiu kiekis n ar nezinomi.\
+Viska suvedus galiausiai duodamas pasirinkimas ar norime matyti galutini vidurki ar mediana\
 
 ##programa v0.1.2
 
 Si programa naudoja vektorius\
-Programoje galima pasirenkant skaiciu 1 arba 2 pasirinkti jos eiga: Zinomas sudentu ir namu darbu skaicius arba jie nezinomi\
-Tuomet galima rankiniu budu suvesti namu darbu resultatus bei egzamino rezultata ir vardus bei pavardes arba juos generuoti automatiskai\
-Galiausiai galima pasirinkti ar norime, kad rexultatuose matytume vidurki arba mediana\
+Programoje galima ivedant skaiciu (1, 2, 3, 4) pasirinkti jos eiga: Ar norima vesti studentus ir ju pazymius ranka; Irasyti studentus ranka\ taciau sugeneruoti ju pazymius; Sugeneruoti tiek pacius studentus ir ju pazymius; Baigti programa.\
+Tuomet renkamasi ar zinomas studentu skaicius m ir ju pazymiu kiekis n ar nezinomi.\
+Viska suvedus galiausiai duodamas pasirinkimas ar norime matyti galutini vidurki ar mediana\
