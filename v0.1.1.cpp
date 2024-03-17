@@ -4,6 +4,7 @@
 #include <ctime>
 #include <cstdlib>
 #include <string>
+#include <vector>
 using namespace std;
 struct studentas
 {
@@ -32,22 +33,26 @@ int main()
   int MinP=1, MaxP=100;
   int m, n;
   studentas *c=nullptr;
+  vector <studentas> students;
+  string names[] = {"John", "Emma", "Michael", "Sophia", "William", "Olivia", "James", "Ava", "Alexander", "Isabella"};
+  string surnames[] = {"Smith", "Johnson", "Williams", "Jones", "Brown", "Davis", "Miller", "Wilson", "Moore", "Taylor"};
+  while(true)
+  {
   cout<<"Enter number"<<endl; 
   cout<<"1 - manual input"<<endl;
   cout<<"2 - generate grades"<<endl;
   cout<<"3 - generate names and grades"<<endl;
-  cout<<"4 - quit"<<endl;
-  int skaicius;
-  string names[] = {"John", "Emma", "Michael", "Sophia", "William", "Olivia", "James", "Ava", "Alexander", "Isabella"};
-  string surnames[] = {"Smith", "Johnson", "Williams", "Jones", "Brown", "Davis", "Miller", "Wilson", "Moore", "Taylor"};    
+  cout<<"4 - quit / show results"<<endl;
+  int skaicius=0;
   cin>>skaicius;
+  if(skaicius==4)
+  {break;}
   cout<<"Enter number"<<endl;
   cout<<"1 - n and m is given"<<endl;
   cout<<"2 - n and m is not given"<<endl;
   int number1; 
   cin>>number1;
-  if(skaicius!=4)
-  {
+  
     if(number1==1)
     {
       cout<<"Enter the number of students: "; cin>>m;
@@ -71,9 +76,8 @@ int main()
             double result;
             if(skaicius==1)
             {
-              cout<<"Enter homework result "<<j+1<<" : ";
+              cout<<"Enter homework result "<<j+1<<": ";
               cin>>result;
-              cout<<endl;
             }
             if(skaicius==2||skaicius==3)
             {
@@ -84,7 +88,7 @@ int main()
           }
             if(skaicius==1)
             {
-              cout<<"Enter exam results: "<<endl;
+              cout<<"Enter exam results: ";
               cin>>c[i].Eresults;
             }
             if(skaicius==2||skaicius==3)
@@ -197,27 +201,25 @@ int main()
         ++m;
       }   
     }
+    for (int i = 0; i < m; ++i) 
+      {
+        students.push_back(c[i]);
+        delete[] c[i].nd;
+      }
+        delete[] c;
+  }
     string choice;
     cout<<"Choose either average or median: "; cin>>choice;
     if (choice=="median")
     {
       cout<<"Name      Surname      Grade(Med.)"<<endl;
-      for(int i=0; i<m; i++)
-      {cout<<fixed<<setw(9)<<left<<c[i].name<<" "<<setw(12)<<left<<c[i].surname<<" "<<setprecision(2)<<setw(13)<<c[i].median<<endl;}
+      for(const auto& student : students)
+      {cout<<fixed<<setw(9)<<left<<student.name<<" "<<setw(12)<<left<<student.surname<<" "<<setprecision(2)<<setw(13)<<student.median<<endl;}
     }
     else if (choice=="average")
     {
       cout<<"Name      Surname      Grade(Vid.)"<<endl;
-      for(int i=0; i<m; i++)
-      {cout<<fixed<<setw(9)<<left<<c[i].name<<" "<<setw(12)<<left<<c[i].surname<<" "<<setprecision(2)<<setw(13)<<c[i].grade<<endl;}
+      for(const auto& student : students)
+      {cout<<fixed<<setw(9)<<left<<student.name<<" "<<setw(12)<<left<<student.surname<<" "<<setprecision(2)<<setw(13)<<student.grade<<endl;}
     }
-    if (c != nullptr)
-    {
-        for (int i = 0; i < m; ++i)
-        {
-            delete[] c[i].nd;
-        }
-        delete[] c;
-    }
-  }
 }
