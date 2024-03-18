@@ -54,25 +54,57 @@ string generateRandomSurname(vector <string> surnames) {
 
 int main() 
 {
-  initializeNamesAndSurnames();
   srand(time(0));
   int MinP=1, MaxP=100;
   int m,n;
   vector <studentas> c;
+  vector <studentas> students;
+  while (true)
+  {
   cout<<"Enter number"<<endl; 
   cout<<"1 - manual input"<<endl;
   cout<<"2 - generate grades"<<endl;
   cout<<"3 - generate names and grades"<<endl;
-  cout<<"4 - quit"<<endl;
+  cout<<"4 - quit / show results"<<endl;
+  cout<<"Number: ";
   int skaicius;
   cin>>skaicius;
+  if(skaicius==4)
+  {break;}
+  int number2;
+  if(skaicius==3)
+  {
+    cout<<"Enter number"<<endl;
+    cout<<"1 - generate name and surname by pc"<<endl;
+    cout<<"2 - manually input names and surnames for generating students"<<endl;
+    cout<<"Number: ";
+    cin>>number2;
+    if(number2==1)
+    {
+      initializeNamesAndSurnames();
+    }
+    if(number2==2)
+    {
+      while(true)
+      {
+        string vardas, pavarde;
+        cout<<"Enter name or type 'quit' to quit: ";
+        cin>>vardas;
+        if(vardas=="quit")
+        {break;}
+        cout<<"Enter surname: ";
+        cin>>pavarde;
+        names.push_back(vardas);
+        surnames.push_back(pavarde);
+      }
+    }
+  }
   cout<<"Enter number"<<endl;
   cout<<"1 - n and m is given"<<endl;
   cout<<"2 - n and m is not given"<<endl;
+  cout<<"Number: ";
   int number1; 
   cin>>number1;
-  if(skaicius!=4)
-  {
     if(number1==1)
     {
       cout<<"Enter the number of students: "; cin>>m;
@@ -88,15 +120,15 @@ int main()
         }
         else if(skaicius==3)
         {
-          c[i].name=generateRandomName(names);
-          c[i].surname=generateRandomSurname(surnames);
+            c[i].name=generateRandomName(names);
+            c[i].surname=generateRandomSurname(surnames); 
         }
           for(int j=0; j<n; j++)
           {
             double result=0;
             if(skaicius==1)
             {
-              cout<<"Enter homework result "<<j+1<<" : "<<endl;
+              cout<<"Enter homework result "<<j+1<<" :";
               cin>>result;
             }
             if(skaicius==2||skaicius==3)
@@ -108,7 +140,7 @@ int main()
           }
             if(skaicius==1)
             {
-              cout<<"Enter exam results: "<<endl;
+              cout<<"Enter exam results: ";
               cin>>c[i].Eresults;
             }
             if(skaicius==2||skaicius==3)
@@ -213,19 +245,28 @@ int main()
         c.resize(m+1);
       }   
     }
+    for (int i = 0; i < m; ++i) 
+      {
+        students.push_back(c[i]);
+      }
+      c.clear();
+      names.clear();
+      surnames.clear();
+      cout<<endl;
+  
+  }
     string choice;
     cout<<"Choose either average or median: "; cin>>choice;
     if (choice=="median")
     {
       cout<<"Name     Surname      Grade(Med.)"<<endl;
-      for(int i=0; i<m; i++)
-      {cout<<fixed<<setw(8)<<left<<c[i].name<<" "<<setw(12)<<left<<c[i].surname<<" "<<setprecision(2)<<setw(13)<<c[i].median<<endl;}
+      for(const auto& student : students)
+      {cout<<fixed<<setw(8)<<left<<student.name<<" "<<setw(12)<<left<<student.surname<<" "<<setprecision(2)<<setw(13)<<student.median<<endl;}
     }
     else if (choice=="average")
     {
       cout<<"Name     Surname      Grade(Vid.)"<<endl;
-      for(int i=0; i<m; i++)
-      {cout<<fixed<<setw(8)<<left<<c[i].name<<" "<<setw(12)<<left<<c[i].surname<<" "<<setprecision(2)<<setw(13)<<c[i].grade<<endl;}
+      for(const auto& student : students)
+      {cout<<fixed<<setw(8)<<left<<student.name<<" "<<setw(12)<<left<<student.surname<<" "<<setprecision(2)<<setw(13)<<student.grade<<endl;}
     }
-  }
 }
