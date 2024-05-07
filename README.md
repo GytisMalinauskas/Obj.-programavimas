@@ -8,4 +8,4 @@ Pasirinkus skaityma is failo ismetamas (.txt) failu rinkinys\
 Viska suvedus duodamas pasirinkimas ar norime matyti galutini vidurki ar mediana\
 Ir galiausiai prasoma pasirinkti pagal ka mes norime rusiuoti: pagal varda, pavarde, pazymi.\
 Sioje programoje realizuotas try-throw-catch klaidu gaudymas\
-Taip pat programa iskaidyta i header (.h) ir function (.cpp) failus\
+Taip pat programa iskaidyta i header (.h) ir function (.cpp) failus
