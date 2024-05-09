@@ -12,5 +12,6 @@ Taip pat programa iskaidyta i header (.h) ir function (.cpp) failus\
 Generuojant faila reikia irasyti studentu kieki bei kiek namu darbu jiems buvo priskirta\
 Prideta funkcija, kuri leidzia pasirinkti kur norime isvesti failus: koncoleje ar i faila\
 Isvedant i faila studentai yra paskirtomi i kietus (tie kuriu balas >= 5.0) ir lievus (balas<5.0)\
-Failai i kuriuos isvedami rezultatai vadinasi lievi.txt ir kieti.txt 
+Failai i kuriuos isvedami rezultatai vadinasi lievi.txt ir kieti.txt\
+Pridetas laiko matavimas
 
