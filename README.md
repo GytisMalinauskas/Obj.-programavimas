@@ -18,27 +18,27 @@ Failai i kuriuos isvedami rezultatai vadinasi lievi.txt ir kieti.txt\
 
 **Sugeneruotas StudentaiGen1000.txt**\
 \
-<img width="443" alt="Screenshot 2024-05-10 at 10 07 32" src="https://github.com/GytisMalinauskas/Obj.-programavimas/assets/159523970/97c93c30-87a4-411a-a69b-6cbce36c2742">
+<img width="443" alt="Screenshot 2024-05-10 at 10 07 32" src="https://github.com/GytisMalinauskas/Obj.-programavimas/assets/159523970/97c93c30-87a4-411a-a69b-6cbce36c2742">\
 **Sugeneruotas StudentaiGen10000.txt**\
 \
-<img width="450" alt="Screenshot 2024-05-10 at 10 07 55" src="https://github.com/GytisMalinauskas/Obj.-programavimas/assets/159523970/40b4fae6-f30e-4ec7-8fff-14b143fd0fb7">
+<img width="450" alt="Screenshot 2024-05-10 at 10 07 55" src="https://github.com/GytisMalinauskas/Obj.-programavimas/assets/159523970/40b4fae6-f30e-4ec7-8fff-14b143fd0fb7">\
 **Sugeneruotas StudentaiGen100000.txt**\
 \
-<img width="459" alt="Screenshot 2024-05-10 at 10 08 13" src="https://github.com/GytisMalinauskas/Obj.-programavimas/assets/159523970/1a025999-4611-4a8d-b53c-e4f95a5e246a">
+<img width="459" alt="Screenshot 2024-05-10 at 10 08 13" src="https://github.com/GytisMalinauskas/Obj.-programavimas/assets/159523970/1a025999-4611-4a8d-b53c-e4f95a5e246a">\
 **Sugeneruotas StudentaiGen1000000.txt**\
 \
-<img width="466" alt="Screenshot 2024-05-10 at 10 08 44" src="https://github.com/GytisMalinauskas/Obj.-programavimas/assets/159523970/051f17a3-6248-4af9-b1d9-3fc8dd1d4079">
+<img width="466" alt="Screenshot 2024-05-10 at 10 08 44" src="https://github.com/GytisMalinauskas/Obj.-programavimas/assets/159523970/051f17a3-6248-4af9-b1d9-3fc8dd1d4079">\
 **Sugeneruotas StudentaiGen10000000.txt**\
 \
-<img width="479" alt="Screenshot 2024-05-10 at 10 10 15" src="https://github.com/GytisMalinauskas/Obj.-programavimas/assets/159523970/56136da8-449a-4237-914f-2d0cd79d9eea">
+<img width="479" alt="Screenshot 2024-05-10 at 10 10 15" src="https://github.com/GytisMalinauskas/Obj.-programavimas/assets/159523970/56136da8-449a-4237-914f-2d0cd79d9eea">\
 **Is anksciau sugeneruoto file'o studentai10000.txt skaitymas bei rasymas i file'us lievi.txt ir kiekti.txt**\
 \
-<img width="439" alt="Screenshot 2024-05-10 at 10 17 50" src="https://github.com/GytisMalinauskas/Obj.-programavimas/assets/159523970/cf0efc8e-29b8-4aae-8d93-438669aa6ab7">
+<img width="439" alt="Screenshot 2024-05-10 at 10 17 50" src="https://github.com/GytisMalinauskas/Obj.-programavimas/assets/159523970/cf0efc8e-29b8-4aae-8d93-438669aa6ab7">\
 **Is anksciau sugeneruoto file'o studentai100000.txt skaitymas bei rasymas i file'us lievi.txt ir kiekti.txt**\
 \
-<img width="446" alt="Screenshot 2024-05-10 at 10 19 00" src="https://github.com/GytisMalinauskas/Obj.-programavimas/assets/159523970/667d1e04-8427-45e6-ab7b-e40515ef99cc">
+<img width="446" alt="Screenshot 2024-05-10 at 10 19 00" src="https://github.com/GytisMalinauskas/Obj.-programavimas/assets/159523970/667d1e04-8427-45e6-ab7b-e40515ef99cc">\
 **Is anksciau sugeneruoto file'o studentai1000000.txt skaitymas bei rasymas i file'us lievi.txt ir kiekti.txt**\
 \
-<img width="454" alt="Screenshot 2024-05-10 at 10 22 35" src="https://github.com/GytisMalinauskas/Obj.-programavimas/assets/159523970/a667cc37-45ca-4f2c-9eec-04a2c42be578">
+<img width="454" alt="Screenshot 2024-05-10 at 10 22 35" src="https://github.com/GytisMalinauskas/Obj.-programavimas/assets/159523970/a667cc37-45ca-4f2c-9eec-04a2c42be578">\
 
 
