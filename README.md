@@ -1,4 +1,4 @@
-##programa v0.4
+## programa v0.4
 
 Si programa naudoja vektorius\
 Programoje galima ivedant skaiciu (1, 2, 3, 4, 5, 6) pasirinkti jos eiga: Ar norima vesti studentus ir ju pazymius ranka; Irasyti studentus ranka taciau sugeneruoti ju pazymius; Sugeneruoti tiek pacius studentus ir ju pazymius; Skaityti duomenis is failo; Sugeneruoti faila; Baigti programa\
