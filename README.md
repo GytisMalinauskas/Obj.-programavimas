@@ -4,6 +4,7 @@
 *RAM: 16 GB 2400 MHz DDR4*\
 *HDD: Macintosh HD 500GB*\
 \
+*Tyrimai yra atliekami su 1000, 10000, 100000, 1000000 ir 10000000 studentu*\
 **1 Strategijos tyrimas**
 
 | *1000 studentu* | Vector | List | deque |
