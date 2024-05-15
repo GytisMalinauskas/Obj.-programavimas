@@ -5,37 +5,37 @@
 *HDD: Macintosh HD 500GB*\
 \
 **1 Strategijos tyrimas**\
-*1000 studentu*\
 
-|                     |    Vector    |      List     |     deque    |
+
+| *1000 studentu* | Vector | List | deque |
 |:-------------------:|:------------:|:-------------:|:------------:|
 | Failo Skaitymas     | | | |
 | Studentu Rusiavimas | | | |
 | Studentu Skirstymas | | | |
-*10000 studentu*\
 
-|                     |    Vector    |      List     |     deque    |
+
+| *10000 studentu* | Vector | List | deque |
 |:-------------------:|:------------:|:-------------:|:------------:|
 | Failo Skaitymas     | | | |
 | Studentu Rusiavimas | | | |
 | Studentu Skirstymas | | | |
-*100000 studentu*\
 
-|                     |    Vector    |      List     |     deque    |
+
+| *100000 studentu* | Vector | List | deque |
 |:-------------------:|:------------:|:-------------:|:------------:|
 | Failo Skaitymas     | | | |
 | Studentu Rusiavimas | | | |
 | Studentu Skirstymas | | | |
-*1000000 studentu*\
 
-|                     |    Vector    |      List     |     deque    |
+
+| *1000000 studentu* | Vector | List | deque |
 |:-------------------:|:------------:|:-------------:|:------------:|
 | Failo Skaitymas     | | | |
 | Studentu Rusiavimas | | | |
 | Studentu Skirstymas | | | |
-*10000000 studentu*\
 
-|                     |    Vector    |      List     |     deque    |
+
+| *10000000 studentu* | Vector | List | deque |
 |:-------------------:|:------------:|:-------------:|:------------:|
 | Failo Skaitymas     | | | |
 | Studentu Rusiavimas | | | |
