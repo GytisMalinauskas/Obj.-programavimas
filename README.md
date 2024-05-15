@@ -6,6 +6,7 @@
 \
 **1 Strategijos tyrimas**\
 *1000 studentu*\
+\
 |                     |    Vector    |      List     |     deque    |
 |:-------------------:|:------------:|:-------------:|:------------:|
 | Failo Skaitymas     | | | |
