@@ -6,7 +6,7 @@
 \
 *Tyrimai yra atliekami su 1000, 10000, 100000, 1000000 ir 10000000 studentu*\
 *Laikai aprasyti sekundes formatu*\
-*Istirta, kad 2-oji strategija gretesne, todel 3-oji strategija yra optimizuota pagal 2-aja strategija.* 
+*Istirta, kad 2-oji strategija greitesne, todel 3-oji strategija yra optimizuota pagal 2-aja strategija.* 
 \
 **1 Strategijos tyrimas**
 
