@@ -14,3 +14,4 @@ Panaudotas programos veikimo spartos matavimo metodas
 ## Programos versija v1.0
 Veikiancios VECTOR, LIST ir DEQUE programos\
 Optimizuotas studentu rusiavimas pagal 3 strategijas
+Pridetas Makefile programos paleidimui
