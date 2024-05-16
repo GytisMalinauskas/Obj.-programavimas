@@ -1,9 +1,25 @@
+# Kompiliatoriaus nustatymai
+CXX = g++
+CXXFLAGS = -std=c++11 -Wall
 
-output: *.o
-	g++ *.o -o run
+# Šaltinio failai ir objekto failai
+SRC = $(wildcard src/*.cpp)
+OBJ = $(SRC:.cpp=.o)
 
-*.o: *.cpp
-	g++ -c *.cpp
+# Vykdomasis failas
+TARGET = run
 
+# Pagrindinė taisyklė
+all: $(TARGET)
+
+# Vykdomojo failo taisyklė
+$(TARGET): $(OBJ)
+	$(CXX) $(CXXFLAGS) -o $@ $^
+
+# Objekto failų taisyklė
+%.o: %.cpp
+	$(CXX) $(CXXFLAGS) -c $< -o $@
+
+# Švaros taisyklė
 clean:
-	rm *.o run
+	rm -f $(OBJ) $(TARGET)
