@@ -1,9 +1,9 @@
 # Kompiliatoriaus nustatymai
 CXX = g++
-CXXFLAGS = -std=c++11 -Wall -Ideque/headers
+CXXFLAGS = -std=c++11 -Wall -Iheaders
 
 # Šaltinio failai ir objekto failai
-SRC = $(wildcard deque/source/*.cpp)
+SRC = $(wildcard source/*.cpp)
 OBJ = $(SRC:.cpp=.o)
 
 # Vykdomasis failas
@@ -14,13 +14,16 @@ all: $(TARGET)
 
 # Vykdomojo failo taisyklė
 $(TARGET): $(OBJ)
-echo "Building target: $(TARGET)"
-	$(CXX) $(CXXFLAGS) -o $@ $^
+	@echo "Building target: $(TARGET)"
+	$(CXX) $(CXXFLAGS) -o $@ $(OBJ)
 
 # Objekto failų taisyklė
-deque/source/%.o: deque/source/%.cpp
-echo "Compiling $<"
+source/%.o: source/%.cpp
+	@echo "Compiling $<"
 	$(CXX) $(CXXFLAGS) -c $< -o $@
+
+# Debug statement to print object files
+	@echo "Object files: $(OBJ)"
 
 # Švaros taisyklė
 clean:
