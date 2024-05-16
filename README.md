@@ -47,34 +47,34 @@
 
 | *1000 studentu* | Vector | List | deque |
 |:-------------------:|:------------:|:-------------:|:------------:|
-| Failo Skaitymas     | 0.004 | 0.009 | 0.005 |
+| Failo Skaitymas     | 0.003| 0.009 | 0.005 |
 | Studentu Rusiavimas | 0.001 | 0 | 0.004 |
-| Studentu Skirstymas | 0 | 0.002 | 0.001 |
+| Studentu Skirstymas | 0| 0 | 0.001 |
 
 
 | *10000 studentu* | Vector | List | deque |
 |:-------------------:|:------------:|:-------------:|:------------:|
 | Failo Skaitymas     | 0.032 | 0.06 | 0.035 |
 | Studentu Rusiavimas | 0.023 | 0.005 | 0.048 |
-| Studentu Skirstymas | 0.004 | 0.021 | 0.009 |
+| Studentu Skirstymas | 0.004 | 0.003 | 0.009 |
 
 
 | *100000 studentu* | Vector | List | deque |
 |:-------------------:|:------------:|:-------------:|:------------:|
-| Failo Skaitymas     | 0.245 | 0.495 | 0.252 |
-| Studentu Rusiavimas | 0.222 | 0.046 | 0.493 |
-| Studentu Skirstymas | 0.034 | 0.159 | 0.092 |
+| Failo Skaitymas     | 0.245 | 0.51 | 0.252 |
+| Studentu Rusiavimas | 0.222 | 0.047 | 0.493 |
+| Studentu Skirstymas | 0.031 | 0.025 | 0.092 |
 
 
 | *1000000 studentu* | Vector | List | deque |
 |:-------------------:|:------------:|:-------------:|:------------:|
-| Failo Skaitymas     | 2.4 | 4.777 | 2.433 |
-| Studentu Rusiavimas | 2.754 | 0.433 | 6.179 |
-| Studentu Skirstymas | 0.337 | 1.643 | 0.929 |
+| Failo Skaitymas     | 2.4 | 4.825 | 2.433 |
+| Studentu Rusiavimas | 2.724 | 0.433 | 6.179 |
+| Studentu Skirstymas | 0.337 | 0.248 | 0.929 |
 
 
 | *10000000 studentu* | Vector | List | deque |
 |:-------------------:|:------------:|:-------------:|:------------:|
-| Failo Skaitymas     | 24.759 | 49.413 | 23.264 |
-| Studentu Rusiavimas | 33.473 | 4.934 | 72.756 |
-| Studentu Skirstymas | 3.523 | 16.495 | 14.943 |
+| Failo Skaitymas     | 23.959 | 49.439| 23.264 |
+| Studentu Rusiavimas | 31.419 | 6.666 | 72.756 |
+| Studentu Skirstymas | 3.623 | 7.173 | 14.943 |
