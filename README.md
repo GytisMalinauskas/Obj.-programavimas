@@ -1,4 +1,4 @@
-## Programa v1.0
+# Programa v1.0
 **Sistemos specifikacijos**\
 *CPU: 2,6 GHz 6-Core Intel Core i7*\
 *RAM: 16 GB 2400 MHz DDR4*\
@@ -8,7 +8,7 @@
 *Laikai aprasyti sekundes formatu*\
 *Istirta, kad 2-oji strategija greitesne, todel 3-oji strategija yra optimizuota pagal 2-aja strategija.* 
 \
-# 1 Strategijos tyrimas
+## Strategijos tyrimas
 
 | *1000 studentu* | Vector | List | deque |
 |:-------------------:|:------------:|:-------------:|:------------:|
@@ -44,7 +44,7 @@
 | Studentu Rusiavimas | 32.311 | 5.274 | 71.405 |
 | Studentu Skirstymas | 6.563 | 32.097 | 22.431 |
 
-# 2 Strategijos tyrimas
+## 2 Strategijos tyrimas
 
 | *1000 studentu* | Vector | List | deque |
 |:-------------------:|:------------:|:-------------:|:------------:|
