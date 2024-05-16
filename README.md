@@ -8,7 +8,7 @@
 *Laikai aprasyti sekundes formatu*\
 *Istirta, kad 2-oji strategija greitesne, todel 3-oji strategija yra optimizuota pagal 2-aja strategija.* 
 \
-**1 Strategijos tyrimas**
+# 1 Strategijos tyrimas
 
 | *1000 studentu* | Vector | List | deque |
 |:-------------------:|:------------:|:-------------:|:------------:|
@@ -44,7 +44,7 @@
 | Studentu Rusiavimas | 32.311 | 5.274 | 71.405 |
 | Studentu Skirstymas | 6.563 | 32.097 | 22.431 |
 
-**2 Strategijos tyrimas**
+# 2 Strategijos tyrimas
 
 | *1000 studentu* | Vector | List | deque |
 |:-------------------:|:------------:|:-------------:|:------------:|
@@ -79,3 +79,21 @@
 | Failo Skaitymas     | 23.959 | 49.439| 23.264 |
 | Studentu Rusiavimas | 31.419 | 6.666 | 72.756 |
 | Studentu Skirstymas | 3.623 | 7.173 | 14.943 |
+
+**1-os strategijos laiku vidurkis**
+
+| *Laiku Vidurkis* | Vector | List | deque |
+|:-------------------:|:------------:|:-------------:|:------------:|
+| Failo Skaitymas     | 5.386 | 11.041 | 5.417 |
+| Studentu Rusiavimas | 7.051 | 1.151 | 15.586 |
+| Studentu Skirstymas | 1.423 | 7.014 | 4.794 |
+
+ **2-os strategijos laiku vidurkis**
+ 
+| *Laiku Vidurkis* | Vector | List | deque |
+|:-------------------:|:------------:|:-------------:|:------------:|
+| Failo Skaitymas     | 5.328 | 10.974 | 5.198 |
+| Studentu Rusiavimas | 6.878| 1.43 | 15.896 |
+| Studentu Skirstymas | 0.799 | 1.49 | 3.195 |
+
+
