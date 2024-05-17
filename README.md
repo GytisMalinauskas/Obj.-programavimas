@@ -107,11 +107,11 @@
    - Norėdami grįžti vienu folderiu atgal, naudokite komandą `cd ..`.
 
 ## 2. Kompiliavimas ir paleidimas
-5. Rašykite `make` ir palaukite, kol sistema sukompiliuos reikiamus failus.
-6. Toliau rašykite `./run` ir jūsų programa turėtų pasileisti. Jei programa nepasileido, vadinasi, praleidote kažkurį žingsnį.
+1. Rašykite `make` ir palaukite, kol sistema sukompiliuos reikiamus failus.
+2. Toliau rašykite `./run` ir jūsų programa turėtų pasileisti. Jei programa nepasileido, vadinasi, praleidote kažkurį žingsnį.
 
 ## 3. Programos naudojimas
-7. Paleista programa jums parodys meniu, kuriame bus prašoma įvesti numerį nuo 1 iki 6, kad pasirinktumėte programos eigą:
+1. Paleista programa jums parodys meniu, kuriame bus prašoma įvesti numerį nuo 1 iki 6, kad pasirinktumėte programos eigą:
 
     ```
     Enter number
@@ -124,7 +124,7 @@
     Number:
     ```
 
-8. Pasirinkus nuo 1 iki 3, bus prašoma įvesti numerį nuo 1 iki 2, kad pasirinktumėte programos eigą:
+2. Pasirinkus nuo 1 iki 3, bus prašoma įvesti numerį nuo 1 iki 2, kad pasirinktumėte programos eigą:
 
     ```
     Enter number
@@ -136,11 +136,11 @@
     - Toliau programos eiga skirsis, priklausomai nuo pasirinkto skaičiaus 8-ame žingsnyje.
     - Pasirinkus skaičių 2, sekite instrukcijas.
 
-9. Pasirinkus skaičių 4 iš meniu, bus parodyti visi `.txt` failai. Vieną jų reikia pasirinkti.
+3. Pasirinkus skaičių 4 iš meniu, bus parodyti visi `.txt` failai. Vieną jų reikia pasirinkti.
    - Kad programa galėtų pasiekti jūsų `.txt` failą, šį failą reikia įdėti šalia `headers` ir `source` failų.
    - `.txt` failas privalo atitikti tokią struktūrą: `vardas pavarde nd1 nd2 ... egz`.
 
-10. Pasirinkus skaičių 5 iš meniu, bus prašoma įvesti studentų skaičių ir namų darbų kiekį.
+4. Pasirinkus skaičių 5 iš meniu, bus prašoma įvesti studentų skaičių ir namų darbų kiekį.
     
     ```
     How many students you want to generate in file?: 10000
@@ -149,7 +149,7 @@
 
     - Įvedus studentų skaičių 10000, atitinkamai bus sukurtas `StudentaiGen10000.txt` failas.
 
-12. Pasirinkus skaičių 6 iš meniu, bus prašoma pasirinkti rezultatų išvedimo būdą `f` arba `c`.
+5. Pasirinkus skaičių 6 iš meniu, bus prašoma pasirinkti rezultatų išvedimo būdą `f` arba `c`.
     
     ```
     Choose how to output the results:
@@ -184,7 +184,7 @@
       Choice:
       ```
 
-14. Galiausiai bus parodytas atsakymas:
+6. Galiausiai bus parodytas atsakymas:
     - Jei pasirinkote išvesti rezultatus terminale arba konsoleje, tai matysite rezultatus konsoleje.
     - Jei pasirinkote rezultatus rašyti į failą, tai rezultatai bus išvesti į failus `lievi.txt` ir `kieti.txt`.
 
