@@ -101,7 +101,7 @@
 1. Parsisiuskite source code.zip arba source.tar.gz
 2. Iskelkite parsiusta folderi i programavimo aplinka (Parsisiuskite reikalingus c++ ir makefile extension'us)
 3. Paleiskite terminala arba command promt
-4. Nunaviguokite i viena is triju folderiu: vector, deque, list (Naudodami komanda *cd <failoPavadinimas>* jus nueisite i kita folderi (rodyklyciu nenaudokite). Noredami grizti vienu folderiu atgal naudokite komanda *cd <..>*.
+4. Nunaviguokite i viena is triju folderiu: vector, deque, list (Naudodami komanda cd *<failoPavadinimas>* jus nueisite i kita folderi (rodyklyciu nenaudokite). Noredami grizti vienu folderiu atgal naudokite komanda *cd <..>*.
 5. Rasykite make ir palaukite, kol sistema sukompiliuos reikiamus failus.
 6. Toliau rasykite *<./run>* ir jusu programa turetu pasileisti. Jeigu programa nepasileido, vadinosi praleidote kazkuri tai zingsni.
 7. 
